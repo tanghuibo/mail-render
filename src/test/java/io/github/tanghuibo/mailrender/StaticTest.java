@@ -22,7 +22,7 @@ public class StaticTest {
         JSONObject jsonObj = JSON.parseObject(data);
     }
 
-    private static String resourceAsString(String path) throws IOException {
+    public static String resourceAsString(String path) throws IOException {
         try (InputStream inputStream = StaticTest.class.getResourceAsStream(path)) {
             return IOUtils.toString(inputStream, StandardCharsets.UTF_8);
         }
